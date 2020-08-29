@@ -1,2 +1,0 @@
-# Practise
-PYTHON PRACTISE
