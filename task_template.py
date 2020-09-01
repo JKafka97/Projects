@@ -41,7 +41,7 @@ log={"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pass123"}
 if user_name not in log.keys() and log[user_name] != user_password:
     quit
 print("We have 3 texts to be analyzed.")
-number=int(input("Enter a number btw. 1 and 3 to select: 2"))
+number=int(input("Enter a number btw. 1 and 3 to select: "))
 words= len(TEXTS[number].split())
 if number == 1:
-    print("There are 62 words in the selected text", words)
+    print("There are {} words in the selected text".format(words))
