@@ -28,8 +28,7 @@ are found in multiple limestone layers, which lie some
 represent several varieties of perch, as well as 
 other freshwater genera and herring similar to those 
 in modern oceans. Other fish such as paddlefish, 
-garpike and stingray are also present.'''
-]
+garpike and stingray are also present.''']
 
 splitter = "-"*40
 print(splitter)
@@ -37,11 +36,11 @@ print("Welcome to the app. Please log in: ")
 user_name = input("USERNAME: ")
 user_password = input("PASSWORD: ")
 print(splitter)
-log={"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pass123"}
+log = {"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pass123"}
 if user_name not in log.keys() and log[user_name] != user_password:
     quit
 print("We have 3 texts to be analyzed.")
-number=int(input("Enter a number btw. 1 and 3 to select: "))
-words= len(TEXTS[number].split())
+number = int(input("Enter a number btw. 1 and 3 to select: "))
+words = len(TEXTS[number].split())
 if number == 1:
     print("There are {} words in the selected text".format(words))
