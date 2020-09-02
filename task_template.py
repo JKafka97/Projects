@@ -30,17 +30,50 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish, 
 garpike and stingray are also present.''']
 
-splitter = "-"*40
-print(splitter)
-print("Welcome to the app. Please log in: ")
-user_name = input("USERNAME: ")
-user_password = input("PASSWORD: ")
-print(splitter)
-log = {"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pass123"}
-if user_name not in log.keys() and log[user_name] != user_password:
-    quit
-print("We have 3 texts to be analyzed.")
+#splitter = "-"*40
+#print(splitter)
+#print("Welcome to the app. Please log in: ")
+#user_name = input("USERNAME: ")
+#user_password = input("PASSWORD: ")
+#print(splitter)
+#log = {"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pass123"}
+#if user_name not in log.keys() and log[user_name] != user_password:
+    #quit
+#print("We have 3 texts to be analyzed.")
 number = int(input("Enter a number btw. 1 and 3 to select: "))
-words = len(TEXTS[number].split())
+split_words = TEXTS[number-1].split()
+words = len(split_words)
+title = 0
+upper = 0
+lower = 0
+numeric = 0
+calculate = 0
+while calculate != words:
+    if split_words[calculate].istitle():
+        title += 1
+    elif split_words[calculate].isupper():
+        upper += 1
+    elif split_words[calculate].islower():
+        lower += 1
+    elif split_words[calculate].isnumeric():
+        numeric += 1
+    calculate += 1
+
 if number == 1:
     print("There are {} words in the selected text".format(words))
+    print("There are {} titlecase words".format(title))
+    print("There are {} uppercase words".format(upper))
+    print("There are {} lowercase words".format(lower))
+    print("There are {} numeric strings".format(numeric))
+if number == 2:
+    print("There are {} words in the selected text".format(words))
+    print("There are {} titlecase words".format(title))
+    print("There are {} uppercase words".format(upper))
+    print("There are {} lowercase words".format(lower))
+    print("There are {} numeric strings".format(numeric))
+if number == 3:
+    print("There are {} words in the selected text".format(words))
+    print("There are {} titlecase words".format(title))
+    print("There are {} uppercase words".format(upper))
+    print("There are {} lowercase words".format(lower))
+    print("There are {} numeric strings".format(numeric))
