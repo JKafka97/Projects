@@ -44,7 +44,7 @@ number = int(input("Enter a number btw. 1 and 3 to select: "))
 print(splitter)
 
 text_no_comma = str(TEXTS[number-1]).replace(",", "")
-text_no_dot = text_no_comma.replace(".", "")
+text_no_dot = text_no_comma.strip(",.")
 split_words = text_no_dot.split()
 words = len(split_words)
 title = 0
