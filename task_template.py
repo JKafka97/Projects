@@ -60,19 +60,19 @@ upper = 0
 lower = 0
 numeric = 0
 calculate = 0
-
-while calculate != words:
-    if split_words[calculate].istitle():
+copy_list = split_words.copy()
+while split_words:
+    text_part = split_words.pop(0)
+    if text_part.istitle():
         title += 1
-    elif split_words[calculate].isupper():
+    elif text_part.isupper():
         upper += 1
-    elif split_words[calculate].islower():
+    elif text_part.islower():
         lower += 1
-    elif split_words[calculate].isnumeric():
-        my_num = split_words[calculate]
+    elif text_part.isnumeric():
+        my_num = text_part
         numeric += 1
 
-    calculate += 1
 print("There are {} words in the selected text".format(words))
 print("There are {} titlecase words".format(title))
 print("There are {} uppercase words".format(upper))
@@ -83,8 +83,9 @@ print(splitter)
 word_dict = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0}
 
 calculate = 0
-while calculate != words:
-    word_dict[len(split_words[calculate])] += 1
+while copy_list:
+    text_part = copy_list.pop(0)
+    word_dict[len(text_part)] += 1
     calculate += 1
 print(word_dict)
 
