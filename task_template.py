@@ -60,6 +60,7 @@ upper = 0
 lower = 0
 numeric = 0
 calculate = 0
+my_num = 0
 copy_list = split_words.copy()
 while split_words:
     text_part = split_words.pop(0)
@@ -70,7 +71,7 @@ while split_words:
     elif text_part.islower():
         lower += 1
     elif text_part.isnumeric():
-        my_num = text_part
+        my_num += text_part
         numeric += 1
 
 print("There are {} words in the selected text".format(words))
