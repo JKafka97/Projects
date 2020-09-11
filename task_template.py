@@ -71,7 +71,7 @@ while split_words:
     elif text_part.islower():
         lower += 1
     elif text_part.isnumeric():
-        my_num += text_part
+        my_num += float(text_part)
         numeric += 1
 
 print("There are {} words in the selected text".format(words))
