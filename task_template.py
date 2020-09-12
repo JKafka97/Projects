@@ -76,7 +76,6 @@ while split_words:
         my_num += float(text_part)
         numeric += 1
 
-
 print("There are {} words in the selected text".format(words))
 print("There are {} titlecase words".format(title))
 print("There are {} uppercase words".format(upper))
