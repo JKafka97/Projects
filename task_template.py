@@ -64,11 +64,13 @@ my_num = 0
 word_dict = {}
 
 while split_words:
+
     text_part = split_words.pop(0)
-    if len(text_part) not in word_dict.keys():
-        word_dict[len(text_part)] = 1
-    else:
-        word_dict[len(text_part)] += 1
+    word_dict[len(text_part)] = word_dict.get(len(text_part), 0) + 1
+    #if len(text_part) not in word_dict.keys():
+        #word_dict[len(text_part)] = 1
+    #else:
+        #word_dict[len(text_part)] += 1
     if text_part.istitle():
         title += 1
     elif text_part.isupper():
