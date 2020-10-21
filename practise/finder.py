@@ -1,5 +1,6 @@
 character=input("Write character: ").lower()
 
+
 list=["Adéla", "Adam", "Adriana", "Adrian", "Agáta", "Albert", "Alena", "Aleš",
       "Alexandra", "Alex", "Alice", "Alexander", "Alžběta", "Alexandr", "Amálie",
       "Andrej", "Amélie", "Antonín", "Andrea", "Benjamin", "Aneta", "Dalibor",
